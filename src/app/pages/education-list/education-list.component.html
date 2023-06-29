@@ -1,0 +1,21 @@
+<button mat-raised-button color="primary" (click)="onAdd()"><mat-icon>add</mat-icon>Add Education</button><hr>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Education Name</th>
+        <th>update</th>
+        <th>delete</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of educationList">
+        <td>{{item.id}}</td>
+        <td>{{item.education_level}}</td>
+        <td><button mat-raised-button color="primary" (click)="onEdit(item)" ><mat-icon>edit</mat-icon>update</button></td>
+        <td><button mat-raised-button color="warn" ><mat-icon>delete</mat-icon>delete</button></td>
+      </tr>
+      
+    </tbody>
+  </table>

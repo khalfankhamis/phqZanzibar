@@ -1,0 +1,21 @@
+<button mat-raised-button color="primary" (click)="onAdd()"><mat-icon>add</mat-icon>Add Region</button><hr>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Rank Name</th>
+        <th>update</th>
+        <th>delete</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of regionList">
+        <td>{{item.region_id}}</td>
+        <td>{{item.region_name}}</td>
+        <td><button mat-raised-button color="primary" (click)="onEdit(item)" ><mat-icon>edit</mat-icon>update</button></td>
+        <td><button mat-raised-button color="warn" ><mat-icon>delete</mat-icon>delete</button></td>
+      </tr>
+      
+    </tbody>
+  </table>

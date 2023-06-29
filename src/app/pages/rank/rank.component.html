@@ -1,0 +1,14 @@
+<button mat-raised-button color="primary" (click)="onList()">rankList</button>
+<hr>
+<form [formGroup]="rankForm">
+    <h2>Rank Register form</h2>
+    <div class="row">
+        <div class="col -md-6">
+            <mat-form-field class="example-full-width " appearance="outline" >
+                <mat-label>Rank</mat-label>
+                <input matInput placeholder="Enter ranks" formControlName="rank_name">
+              </mat-form-field>
+        </div>
+    </div>
+    <button mat-raised-button color="primary" [disabled]="rankForm.invalid" (click)="onSave()"><mat-icon>save</mat-icon> save</button>
+</form>
